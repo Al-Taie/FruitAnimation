@@ -14,43 +14,52 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.5" />
+
     <!--  change animation name and id  -->
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animation_id1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/waterm"
-        />
+        app:lottie_rawRes="@raw/waterm"/>
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animation_id2"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        app:lottie_rawRes="@raw/baby"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_autoPlay="true"/>
+        app:lottie_rawRes="@raw/baby" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animation_id22"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        app:lottie_rawRes="@raw/watermelon"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_autoPlay="true"/>
+        app:lottie_rawRes="@raw/watermelon" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animation_id222"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginTop="40dp"
-        app:lottie_rawRes="@raw/watermelon2"
+
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_autoPlay="true"/>
+        app:lottie_rawRes="@raw/watermelon2" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animation_id3"
@@ -58,14 +67,15 @@
         android:layout_height="wrap_content"
         app:lottie_rawRes="@raw/watermelon"
         app:lottie_loop="true"
-        app:lottie_autoPlay="true"
-        tools:ignore="MissingClass" />
-
+        app:lottie_autoPlay="true" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animation_id4"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
         app:lottie_rawRes="@raw/watermelon_enjoying_life"
         app:lottie_loop="true"
         app:lottie_autoPlay="true" />
