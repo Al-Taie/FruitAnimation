@@ -1,16 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <ConstraintSet android:id="@+id/start">
-        <Constraint android:id="@+id/animation_view" />
+        <Constraint
+            android:id="@+id/animation_id3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:lottie_rawRes="@raw/watermelon"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true"
+            tools:ignore="MissingClass" />
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
         <Constraint android:id="@id/animation_view" />
+
     </ConstraintSet>
 
     <Transition
         app:constraintSetEnd="@id/end"
-        app:constraintSetStart="@+id/start" />
+        app:constraintSetStart="@+id/start">
+        <OnSwipe
+            app:touchAnchorId="@+id/animation_id3"
+            app:dragDirection="dragLeft"/>
+    </Transition>
 </MotionScene>
