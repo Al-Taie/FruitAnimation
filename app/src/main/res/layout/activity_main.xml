@@ -4,29 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_main_scene"
     tools:context=".MainActivity"
-    tools:ignore="MotionLayoutInvalidSceneFileReference"
-    app:layoutDescription="@xml/activity_main_scene">
+    android:background="@color/white">
 
-<androidx.constraintlayout.widget.Guideline
-    android:id="@+id/myguideline"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    app:layout_constraintGuide_percent="0.5"
-    android:orientation="horizontal"
-    />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/myguideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
     <!--  change animation name and id  -->
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animation_id1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        app:lottie_loop="true"
-        app:lottie_autoPlay="true"
-        tools:ignore="MissingClass,MissingConstraints"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/waterm"
+        />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animation_id3"
