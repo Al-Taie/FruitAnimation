@@ -1,16 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+<MotionScene xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ConstraintSet android:id="@+id/start">
-        <Constraint android:id="@+id/animation_view" />
+
+
+    <ConstraintSet android:id="@+id/start1">
+        <Constraint
+            android:id="@+id/animation_id1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+          />
+
     </ConstraintSet>
 
-    <ConstraintSet android:id="@+id/end">
-        <Constraint android:id="@id/animation_view" />
+    <ConstraintSet android:id="@+id/end1">
+        <Constraint
+            android:id="@+id/animation_id1"
+            android:layout_width="500dp"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toTopOf="@+id/myguideline"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:ignore="DuplicateIds" />
     </ConstraintSet>
 
     <Transition
-        app:constraintSetEnd="@id/end"
-        app:constraintSetStart="@+id/start" />
+        app:constraintSetEnd="@id/end1"
+        app:constraintSetStart="@+id/start1" >
+        <OnSwipe app:dragDirection="dragUp"
+            app:touchAnchorId="@id/animation_id1"/>
+
+    </Transition>
+
+
+
+
 </MotionScene>
